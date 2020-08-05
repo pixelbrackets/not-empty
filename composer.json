@@ -7,5 +7,12 @@
         "psr-4": {
             "Pixelbrackets\\NotEmpty\\": "src/"
         }
+    },
+    "require-dev": {
+        "mathieuviossat/arraytotexttable": "^1.0",
+        "atoum/atoum": "^3.4"
+    },
+    "scripts": {
+        "test": "atoum -d tests/units/"
     }
 }
