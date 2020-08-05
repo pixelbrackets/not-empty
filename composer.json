@@ -1,0 +1,11 @@
+{
+    "name": "pixelbrackets/not-empty",
+    "description": "not empty() - Adds methods to determine whether a variable is blank or present - Inspired by Ruby on Rails",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Pixelbrackets\\NotEmpty\\": "src/"
+        }
+    }
+}
