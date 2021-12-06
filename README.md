@@ -88,6 +88,10 @@ if (Blank::blank('   ')) { … }
 if (Present::present('acme')) { … }
 ```
 
+💡 If you want to use the methods as global functions (`blank()` instead of
+the namespaced `Pixelbrackets\NotEmpty\Blank::blank()`) then install the
+»global« branch, using `composer require pixelbrackets/not-empty:dev-global`.
+
 ## License
 
 GNU General Public License version 2 or later
