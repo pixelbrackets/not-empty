@@ -65,19 +65,27 @@ Mirror https://github.com/pixelbrackets/not-empty/
 See [tests/demo.php](./tests/demo.php).
 
 ```php
-# empty() === false
-if (empty('acme') === false)
+use Pixelbrackets\NotEmpty\Blank;
+use Pixelbrackets\NotEmpty\NotEmpty;
+use Pixelbrackets\NotEmpty\Present;
 
-# notEmpty()
-if (NotEmpty::notEmpty('acme'))
+# Is a string empty? → Use PHPs »empty«
+if (empty('')) { … }
 
-# strings with whitespace - are not empty, but blank
-if (empty('   ') === false)
+# Is a string not empty? → Use »empty() === false«
+if (empty('acme') === false) { … }
 
-if (Blank::blank('   '))
+# → …or use »notEmpty« instead
+if (NotEmpty::notEmpty('acme')) { … }
 
-# present is the opposite of blank
-if (Present::present('acme'))
+# A strings with whitespaces is blank → use a combination of conditions
+if (is_string('   ') && empty(trim('   '))) { … }
+
+# → …or use »blank« instead
+if (Blank::blank('   ')) { … }
+
+# → use »present« to check the opposite of »blank«
+if (Present::present('acme')) { … }
 ```
 
 ## License
