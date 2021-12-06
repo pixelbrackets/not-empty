@@ -1,11 +1,8 @@
 <?php
 
-namespace Pixelbrackets\NotEmpty;
-
-class Present
-{
-    public static function present($variable)
+if (!function_exists('present')) {
+    function present($variable)
     {
-        return !\Pixelbrackets\NotEmpty\Blank::blank($variable);
+        return !blank($variable);
     }
 }

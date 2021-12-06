@@ -64,11 +64,11 @@ Mirror https://github.com/pixelbrackets/not-empty/
 
 See [tests/demo.php](./tests/demo.php).
 
-```php
-use Pixelbrackets\NotEmpty\Blank;
-use Pixelbrackets\NotEmpty\NotEmpty;
-use Pixelbrackets\NotEmpty\Present;
+**⚠️The current branch »global« adds the functions to the global namespace!**
 
+**Use the main branch to have namespaced methods.**
+
+```php
 # Is a string empty? → Use PHPs »empty«
 if (empty('')) { … }
 
@@ -76,16 +76,16 @@ if (empty('')) { … }
 if (empty('acme') === false) { … }
 
 # → …or use »notEmpty« instead
-if (NotEmpty::notEmpty('acme')) { … }
+if (notEmpty('acme')) { … }
 
 # A strings with whitespaces is blank → use a combination of conditions
 if (is_string('   ') && empty(trim('   '))) { … }
 
 # → …or use »blank« instead
-if (Blank::blank('   ')) { … }
+if (blank('   ')) { … }
 
 # → use »present« to check the opposite of »blank«
-if (Present::present('acme')) { … }
+if (present('acme')) { … }
 ```
 
 💡 If you want to use the methods as global functions (`blank()` instead of

@@ -1,10 +1,7 @@
 <?php
 
-namespace Pixelbrackets\NotEmpty;
-
-class NotEmpty
-{
-    public static function notEmpty($variable)
+if (!function_exists('notEmpty')) {
+    function notEmpty($variable)
     {
         return !empty($variable);
     }

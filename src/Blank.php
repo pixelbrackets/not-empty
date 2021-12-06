@@ -1,10 +1,7 @@
 <?php
 
-namespace Pixelbrackets\NotEmpty;
-
-class Blank
-{
-    public static function blank($variable)
+if (!function_exists('blank')) {
+    function blank($variable)
     {
         if (is_string($variable)) {
             $variable = trim($variable);

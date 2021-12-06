@@ -4,9 +4,11 @@
     "type": "library",
     "license": "GPL-2.0-or-later",
     "autoload": {
-        "psr-4": {
-            "Pixelbrackets\\NotEmpty\\": "src/"
-        }
+        "files": [
+            "src/Blank.php",
+            "src/NotEmpty.php",
+            "src/Present.php"
+        ]
     },
     "require-dev": {
         "mathieuviossat/arraytotexttable": "^1.0",

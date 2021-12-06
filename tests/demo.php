@@ -1,9 +1,5 @@
 <?php
 
-use Pixelbrackets\NotEmpty\Blank;
-use Pixelbrackets\NotEmpty\NotEmpty;
-use Pixelbrackets\NotEmpty\Present;
-
 require __DIR__ . '/../vendor/autoload.php';
 
 ini_set('xdebug.overload_var_dump', '0');
@@ -11,18 +7,18 @@ ini_set('xdebug.overload_var_dump', '0');
 if (empty('acme') === false) {
     //echo 'empty === false' . PHP_EOL;
 }
-if (NotEmpty::notEmpty('acme')) {
+if (notEmpty('acme')) {
     //echo 'notEmpty' . PHP_EOL;
 }
 
 if (empty('   ') === false) {
     //echo 'empty === false' . PHP_EOL;
 }
-if (Blank::blank('   ')) {
+if (blank('   ')) {
     //echo 'blank' . PHP_EOL;
 }
 
-if (Present::present('acme')) {
+if (present('acme')) {
     //echo 'present' . PHP_EOL;
 }
 
@@ -148,11 +144,11 @@ foreach ($testDataProvider as $testData) {
         'empty() expected' => $testData['isEmpty'],
         'empty() result' => empty($testData['value']),
         'notEmpty() expected' => !$testData['isEmpty'],
-        'notEmpty() result' => NotEmpty::notEmpty($testData['value']),
+        'notEmpty() result' => notEmpty($testData['value']),
         'blank() expected' => $testData['isBlank'],
-        'blank() result' => Blank::blank($testData['value']),
+        'blank() result' => blank($testData['value']),
         'present() expected' => !$testData['isBlank'],
-        'present() result' => Present::present($testData['value'])
+        'present() result' => present($testData['value'])
     ];
 }
 
